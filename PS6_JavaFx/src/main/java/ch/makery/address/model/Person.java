@@ -1,6 +1,7 @@
 package ch.makery.address.model;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -17,10 +18,10 @@ import domain.PersonDomainModel;
 public class Person extends PersonDomainModel {
 
     public Person() {
-        this(null, null, null, (Integer) null, null, null);
+        this(null, null, null, null, (Integer) null, null, null);
     }
 
-    public Person(String firstName, String lastName, String street, int postalCode, String city, Object birthday ) {
+    public Person(UUID PersonID, String firstName, String lastName, String street, int postalCode, String city, Object birthday ) {
         this.setFirstName(firstName);
         this.setLastName(lastName);
 
